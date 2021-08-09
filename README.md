@@ -1,8 +1,8 @@
 # Clasificación
 ## qqplots accuracy entrenamiento y validación
 
-![qqplots](../classplots/qqplot-acc-training.png "Accuracy training results")
-![qqplots](../classplots/qqplot-acc-validation.png "Accuracy validation results")
+![qqplots](classplots/qqplot-acc-training.png "Accuracy training results")
+![qqplots](classplots/qqplot-acc-validation.png "Accuracy validation results")
 
 ## Tabla de accuracy
 
