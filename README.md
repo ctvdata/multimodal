@@ -16,10 +16,10 @@ Mean and standard deviation for the obtained accuracy for training and validatio
     <th colspan="2">Validation set</th>
   </tr>
   <tr>
-    <td>&Mu;</td>
-    <td>&Sigma;</td>
-    <td>&Mu;</td>
-    <td>&Sigma;</td>
+    <td>&mu;</td>
+    <td>&sigma;</td>
+    <td>&mu;</td>
+    <td>&sigma;</td>
   </tr>
 </thead>
 <tbody>
