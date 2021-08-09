@@ -6,7 +6,7 @@
 
 ## Tabla de accuracy
 
-Mean and standard deviation for the obtained accuracy for training and validation of text classification.} % By using all components of text better results are achieved.
+Mean and standard deviation for the obtained accuracy for training and validation of text classification. By using all components of text better results are achieved.
 
 <table>
 <thead>
@@ -16,10 +16,10 @@ Mean and standard deviation for the obtained accuracy for training and validatio
     <th colspan="2">Validation set</th>
   </tr>
   <tr>
-    <td>$\mu$</td>
-    <td>$\sigma$</td>
-    <td>$\mu$</td>
-    <td>$\sigma$</td>
+    <td>&Mu</td>
+    <td>&Sigma</td>
+    <td>&Mu</td>
+    <td>&Sigma</td>
   </tr>
 </thead>
 <tbody>
@@ -77,7 +77,8 @@ Mean and standard deviation for the obtained accuracy for training and validatio
 
 ## t-test accuracy
     
-T-test results from the experiments. In all cases the p-value $< .05$, which reflects that there is a significant difference of accuracy between using all components of text and using one or two of them. Confidence intervals of the difference between means also reflect a positive difference in all cases showing also that higher accuracy values are reached by using all components simultaneously.
+T-test results from the experiments. In all cases the p-value < .05, which reflects that there is a significant difference of accuracy between using all components of text and using one or two of them. Confidence intervals of the difference between means also reflect a positive difference in all cases showing also that higher accuracy values are reached by using all components simultaneously.
+                                                                    
 - Tabla de precision (micro y macro)
 - t-test precision (micro y macro)
 - Tabla de recall (micro y macro)
