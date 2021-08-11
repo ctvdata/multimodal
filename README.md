@@ -78,7 +78,67 @@ Mean and standard deviation for the obtained accuracy for training and validatio
 ## t-test accuracy
     
 T-test results from the experiments. In all cases the p-value < .05, which reflects that there is a significant difference of accuracy between using all components of text and using one or two of them. Confidence intervals of the difference between means also reflect a positive difference in all cases showing also that higher accuracy values are reached by using all components simultaneously.
-                                                                    
+
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Component comaprison</th>
+    <th colspan="2">Training set</th>
+    <th colspan="2">Validation set</th>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.4, 0.41]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.2, 0.21]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>.042</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.15, 0.16]</td>
+    <td>.014</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs.Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.02]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
+  </tr>
+</tbody>
+</table>
+
 - Tabla de precision (micro y macro)
 - t-test precision (micro y macro)
 - Tabla de recall (micro y macro)
