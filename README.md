@@ -85,9 +85,12 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 <table>
 <thead>
   <tr>
-    <th rowspan="2">Component comaprison</th>
-    <th colspan="2">Training set</th>
-    <th colspan="2">Validation set</th>
+    <th colspan="5">Accuracy t-tests</th>
+  </tr>
+  <tr>
+    <th rowspan="2"><b>Component comparison</b></th>
+    <th colspan="2"><b>Training set</b></th>
+    <th colspan="2"><b>Validation set</b></th>
   </tr>
   <tr>
     <td>p-val</td>
@@ -142,7 +145,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## Precision (micro y macro)
+## Precision (micro and macro average)
 
 <table>
 <thead>
@@ -218,6 +221,70 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 <table>
 <thead>
   <tr>
+    <th colspan="5">Micro precision t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.42, 0.43]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.2, 0.21]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>0.042</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.15, 0.16]</td>
+    <td>0.014</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.0, 0.01]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
     <th colspan="5">Macro Precision</th>
   </tr>
   <tr>
@@ -285,8 +352,70 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-- t-test precision (micro y macro)
-## Recall (micro y macro)
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Macro precision t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.54, 0.55]</td>
+    <td>&lt;.001</td>
+    <td>[0.16, 0.18]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.17, 0.18]</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.09]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.09]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.13, 0.14]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.01]</td>
+    <td>&lt;.001</td>
+    <td>[0.05, 0.07]</td>
+  </tr>
+</tbody>
+</table>
+
+## Recall (micro and macro average)
 
 <table>
 <thead>
@@ -306,7 +435,6 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
   </tr>
 </thead>
 <tbody>
-  
   <tr>
     <td>Full</td>
     <td><b>0.9095</b></td>
@@ -355,6 +483,69 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
     <td>0.0526</td>
     <td>0.4926</td>
     <td>0.0748</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Micro recall t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.42, 0.43]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.2, 0.21]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>0.042</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.15, 0.16]</td>
+    <td>0.014</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.0, 0.01]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
   </tr>
 </tbody>
 </table>
@@ -429,8 +620,70 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-- t-test recall (micro y macro)
-## F1 (micro y macro)
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Macro recall t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.51, 0.52]</td>
+    <td>&lt;.001</td>
+    <td>[0.12, 0.14]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.24, 0.25]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.09, 0.1]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.16, 0.17]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.07, 0.08]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.03]</td>
+    <td>&lt;.001</td>
+    <td>[0.03, 0.05]</td>
+  </tr>
+</tbody>
+</table>
+
+## F1 (micro and macro average)
 
 <table>
 <thead>
@@ -449,8 +702,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
     <td>&sigma;</td>
   </tr>
 </thead>
-<tbody>
-  
+<tbody>  
   <tr>
     <td>Full</td>
     <td><b>0.9095</b></td>
@@ -499,6 +751,69 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
     <td>0.0526</td>
     <td>0.4926</td>
     <td>0.0748</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Micro F1 t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.42, 0.43]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.2, 0.21]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>0.042</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.15, 0.16]</td>
+    <td>0.014</td>
+    <td>[0.0, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.0, 0.01]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
   </tr>
 </tbody>
 </table>
@@ -573,8 +888,68 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-- t-test F-1 (micro y macro)
-
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Macro F1 t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.54, 0.55]</td>
+    <td>&lt;.001</td>
+    <td>[0.15, 0.16]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.23, 0.25]</td>
+    <td>&lt;.001</td>
+    <td>[0.05, 0.07]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.08, 0.09]</td>
+    <td>&lt;.001</td>
+    <td>[0.05, 0.07]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.16, 0.17]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.02]</td>
+    <td>&lt;.001</td>
+    <td>[0.04, 0.06]</td>
+  </tr>
+</tbody>
+</table>
 
 # Regression metrics results
 ## Training and validation root mean squared error qqplots
@@ -654,6 +1029,69 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Root mean squared error t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[-0.09, -0.09]</td>
+    <td>&lt;.001</td>
+    <td>[-0.08, -0.07]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[-0.1, -0.1]</td>
+    <td>&lt;.001</td>
+    <td>[-0.11, -0.1]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.06, -0.06]</td>
+    <td>&lt;.001</td>
+    <td>[-0.07, -0.06]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[-0.05, -0.05]</td>
+    <td>&lt;.001</td>
+    <td>[-0.05, -0.04]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.02, -0.01]</td>
+    <td>&lt;.001</td>
+    <td>[-0.01, -0.0]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.04, -0.03]</td>
+    <td>&lt;.001</td>
+    <td>[-0.05, -0.04]</td>
+  </tr>
+</tbody>
+</table>
+
 ## Mean absolute error (MAE)
 
 <table>
@@ -722,6 +1160,69 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
     <td>0.0090</td>
     <td>0.7591</td>
     <td>0.022</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Mean absolute error t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[-0.08, -0.08]</td>
+    <td>&lt;.001</td>
+    <td>[-0.07, -0.07]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[-0.1, -0.09]</td>
+    <td>&lt;.001</td>
+    <td>[-0.1, -0.09]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.06, -0.06]</td>
+    <td>&lt;.001</td>
+    <td>[-0.06, -0.05]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[-0.04, -0.04]</td>
+    <td>&lt;.001</td>
+    <td>[-0.04, -0.03]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.02, -0.01]</td>
+    <td>&lt;.001</td>
+    <td>[-0.01, -0.01]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.04, -0.03]</td>
+    <td>&lt;.001</td>
+    <td>[-0.04, -0.03]</td>
   </tr>
 </tbody>
 </table>
@@ -798,6 +1299,69 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
+<table>
+<thead>
+  <tr>
+    <th colspan="5">Mean squared error t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[-0.18, -0.17]</td>
+    <td>&lt;.001</td>
+    <td>[-0.15, -0.14]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[-0.2, -0.19]</td>
+    <td>&lt;.001</td>
+    <td>[-0.2, -0.19]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.12, -0.11]</td>
+    <td>&lt;.001</td>
+    <td>[-0.12, -0.11]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[-0.09, -0.08]</td>
+    <td>&lt;.001</td>
+    <td>[-0.08, -0.07]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.03, -0.02]</td>
+    <td>&lt;.001</td>
+    <td>[-0.02, -0.01]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[-0.07, -0.06]</td>
+    <td>&lt;.001</td>
+    <td>[-0.09, -0.07]</td>
+  </tr>
+</tbody>
+</table>
+
 ## R2 Score
 
 <table>
@@ -866,6 +1430,69 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
     <td>0.0167</td>
     <td>0.1730</td>
     <td>0.0299</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th colspan="5">R2 Score error t-tests</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Component comparison</b></td>
+    <td colspan="2"><b>Training set</b></td>
+    <td colspan="2"><b>Validation set</b></td>
+  </tr>
+  <tr>
+    <td>p-val</td>
+    <td>CI 95%</td>
+    <td>p-val</td>
+    <td>CI 95%</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Full vs. Lexical</td>
+    <td>&lt;.001</td>
+    <td>[0.16, 0.17]</td>
+    <td>&lt;.001</td>
+    <td>[0.13, 0.14]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.18, 0.19]</td>
+    <td>&lt;.001</td>
+    <td>[0.18, 0.19]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.1, 0.11]</td>
+    <td>&lt;.001</td>
+    <td>[0.1, 0.11]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Syntactic</td>
+    <td>&lt;.001</td>
+    <td>[0.08, 0.09]</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.08]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Lexical-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.02, 0.03]</td>
+    <td>&lt;.001</td>
+    <td>[0.01, 0.02]</td>
+  </tr>
+  <tr>
+    <td>Full vs. Syntactic-Semantic</td>
+    <td>&lt;.001</td>
+    <td>[0.06, 0.07]</td>
+    <td>&lt;.001</td>
+    <td>[0.07, 0.08]</td>
   </tr>
 </tbody>
 </table>
