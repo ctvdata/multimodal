@@ -1,12 +1,32 @@
-# Classification metrics results
-## Training and valudation accuracy qqplots
+# Experiment results
+
+This page shows the results of applying our proposed representation to the classification and regression tasks respectively. Given the number of experiments performed for each task we can say that the results fit a normal distribution, this can be verified by looking at the quantile-quantile plots that compare the distribution of the accuracy and root mean squared error (RMSE) results against a normal distribution.
+
+We exhibit the central tendency values for each of the performance metrics obtained. Here, the best values were obtained by using the three text components as a whole. We also present the t-tests implemented to evaluate the statistical significance of comparing the use of the three text components against each of the two-component combinations or using them marginally.
+
+Given that all the p-values are below .05, we can argue that there is a significant difference when using all text components since improvements are obtained in each of the analyzed metrics, this can also be seen in the 95% confidence intervals.
+
+## Table of contents
+1. [Classification metrics results](#classmetrics)
+    1. [Training and valudation accuracy qqplots](#acc-qqplots)
+    2. [Accuracy](#accuracy)
+    3. [Precision (micro and macro average)](#precision)
+    4. [Recall (micro and macro average)](#recall)
+    5. [F1 Score (micro and macro average)](#f1score)
+2. [Regression metrics results](#regmetrics)
+    1. [Training and validation RMSE qqplots](#rmse-qqplots)
+    2. [Root mean squared error (RMSE)](#rmse)
+    3. [Mean absolute error (MAE)](#mae)
+    4. [Mean squared error (MSE)](#mse)
+    5. [R2 score](#r2score)
+
+## Classification metrics results <a name="classmetrics"></a>
+### Training and validation accuracy qqplots <a name="acc-qqplots"></a>
 
 ![qqplots](plots/qqplot-acc-training.png "Accuracy training results")
 ![qqplots](plots/qqplot-acc-validation.png "Accuracy validation results")
 
-## Accuracy
-
-Mean and standard deviation for the obtained accuracy for training and validation of text classification. By using all components of text better results are achieved.
+### Accuracy <a name="accuracy"></a>
 
 <table>
 <thead>
@@ -78,10 +98,6 @@ Mean and standard deviation for the obtained accuracy for training and validatio
 </tbody>
 </table>
 
-## Accuracy t-tests
-    
-T-test results from the experiments. In all cases the p-value < .05, which reflects that there is a significant difference of accuracy between using all components of text and using one or two of them. Confidence intervals of the difference between means also reflect a positive difference in all cases showing also that higher accuracy values are reached by using all components simultaneously.
-
 <table>
 <thead>
   <tr>
@@ -145,7 +161,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## Precision (micro and macro average)
+### Precision (micro and macro average)<a name="precision"></a>
 
 <table>
 <thead>
@@ -415,7 +431,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## Recall (micro and macro average)
+### Recall (micro and macro average)<a name="recall"></a>
 
 <table>
 <thead>
@@ -683,7 +699,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## F1 (micro and macro average)
+### F1 score (micro and macro average)<a name="f1score"></a>
 
 <table>
 <thead>
@@ -951,18 +967,18 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-# Regression metrics results
-## Training and validation root mean squared error qqplots
+## Regression metrics results <a name="regmetrics"></a>
+### Training and validation root mean squared error qqplots <a name="rmse-qqplots"></a>
 
 ![qqplots](plots/qqplot-rmse-training.png "Accuracy training results")
 ![qqplots](plots/qqplot-rmse-validation.png "Accuracy validation results")
 
-## Root mean squared error (RMSE)
+### Root mean squared error (RMSE) <a name="rmse"></a>
 
 <table>
 <thead>
   <tr>
-    <th colspan="5">Root mean squared error</th>
+    <th colspan="5">RMSE</th>
   </tr>
   <tr>
     <td rowspan="2"><b>Used components</b></td>
@@ -1032,7 +1048,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 <table>
 <thead>
   <tr>
-    <th colspan="5">Root mean squared error t-tests</th>
+    <th colspan="5">RMSE t-tests</th>
   </tr>
   <tr>
     <td rowspan="2"><b>Component comparison</b></td>
@@ -1092,12 +1108,12 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## Mean absolute error (MAE)
+### Mean absolute error (MAE) <a name="mae"></a>
 
 <table>
 <thead>
   <tr>
-    <th colspan="5">Mean absolute error</th>
+    <th colspan="5">MAE</th>
   </tr>
   <tr>
     <td rowspan="2"><b>Used components</b></td>
@@ -1167,7 +1183,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 <table>
 <thead>
   <tr>
-    <th colspan="5">Mean absolute error t-tests</th>
+    <th colspan="5">MAE t-tests</th>
   </tr>
   <tr>
     <td rowspan="2"><b>Component comparison</b></td>
@@ -1227,12 +1243,12 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## Mean squared error (MSE)
+### Mean squared error (MSE) <a name="mse"></a>
 
 <table>
 <thead>
   <tr>
-    <th colspan="5">Mean squared error</th>
+    <th colspan="5">MSE</th>
   </tr>
   <tr>
     <td rowspan="2"><b>Used components</b></td>
@@ -1302,7 +1318,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 <table>
 <thead>
   <tr>
-    <th colspan="5">Mean squared error t-tests</th>
+    <th colspan="5">MSE t-tests</th>
   </tr>
   <tr>
     <td rowspan="2"><b>Component comparison</b></td>
@@ -1362,7 +1378,7 @@ T-test results from the experiments. In all cases the p-value < .05, which refle
 </tbody>
 </table>
 
-## R2 Score
+### R2 Score <a name="r2score"></a>
 
 <table>
 <thead>
